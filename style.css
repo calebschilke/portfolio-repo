@@ -1,3 +1,19 @@
+  /* CSS For Mobile Devices, this should alter the entire document */ 
+
+  @media (max-width: 768px) {
+    .body {
+        width: 100%;
+        padding: 10px;
+    .nav {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align text */
+    }
+    .menu li {
+         padding: 10px 0; /* Adjust vertical padding for mobile layout */
+    }
+
+/* Body - General Stylying */ 
+      
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
@@ -6,7 +22,6 @@ body {
 
 /* Navigation Bar, this will be mostly for some basic areas */ 
 
-/* Reset some default styles for the navigation */
 body, ul {
     margin: 0;
     padding: 0;
@@ -49,13 +64,6 @@ body, ul {
     color: #eef4ed;
     font-weight: bold;
   }
-  
-  /* Media query for mobile devices */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   
     .logo {
       margin-bottom: 10px;
@@ -116,18 +124,6 @@ body, ul {
     display: flex;
     justify-content: center;
   }
-  
-/*   .image {
-    margin-left: 250px;
-  }
-
-  img {
-    max-width: 100%;
-    width: 200px;
-    display: block;
-    border-radius: 8px;
-    padding: 20px;
-  } */
   
   .text {
     flex: 1;
@@ -307,14 +303,4 @@ body, ul {
 
 .social-text:hover::before {
   display: inline-block; /* Show it on hover */
-}
-
-
-  /* CSS For Mobile Devices, this should alter the entire document */ 
-
-  @media (max-width: 768px) {
-    .image {
-      margin-right: 0; /* Remove the right margin on small screens */
-      margin-bottom: 20px; /* Add some space between image and text on small screens */
-    }
 }
