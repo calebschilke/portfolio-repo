@@ -268,13 +268,12 @@ display: inline-block; /* Show it on hover */
 }
 
 @media (max-width: 768px) {
-/* Show the side menu when the menu-toggle button is checked */
 
   .menu {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    align-items: left;
   }
   .menu ul {
     display: flex;
