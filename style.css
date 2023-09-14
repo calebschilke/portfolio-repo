@@ -12,6 +12,10 @@
     .menu li {
          padding: 10px 0; /* Adjust vertical padding for mobile layout */
     }
+    .image {
+    margin-right: 0; /* Remove the right margin on small screens */
+    margin-bottom: 20px; /* Add some space between image and text on small screens */
+    }
   }
 
 /* Body - General Stylying */ 
