@@ -4,6 +4,7 @@
     .body {
         width: 100%;
         padding: 10px;
+    }
     .nav {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center-align text */
@@ -11,6 +12,7 @@
     .menu li {
          padding: 10px 0; /* Adjust vertical padding for mobile layout */
     }
+  }
 
 /* Body - General Stylying */ 
       
