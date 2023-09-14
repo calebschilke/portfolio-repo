@@ -272,12 +272,22 @@ display: inline-block; /* Show it on hover */
 
   .menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: left;
   }
   .menu li {
-    max-width: 50%;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
   }
+
   /* Adjust title and subtitle for mobile */
   .title {
       font-size: 48px; /* Adjust font size as needed */
@@ -288,8 +298,9 @@ display: inline-block; /* Show it on hover */
   }
   /* Adjust image and short bio for mobile */
   .logo img {
-      width: 90%; /* Adjust the width to fit the screen */
-      padding: 5px; /* Reduce padding for mobile */
+      width: 80%; /* Adjust the width to fit the screen */
+      height: auto;
+      padding: 10px; /* Reduce padding for mobile */
       top: 20px; /* Adjust positioning for mobile */
   }
 
