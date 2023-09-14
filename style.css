@@ -268,12 +268,13 @@ display: inline-block; /* Show it on hover */
 }
 
 @media (max-width: 768px) {
+/* Show the side menu when the menu-toggle button is checked */
 
   .menu {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: left;
+    align-items: center;
   }
   .menu ul {
     display: flex;
@@ -298,7 +299,7 @@ display: inline-block; /* Show it on hover */
   /* Adjust image and short bio for mobile */
   .logo img {
       width: 80%; /* Adjust the width to fit the screen */
-      margin-right: 10px;
+      height: auto;
       padding: 10px; /* Reduce padding for mobile */
       top: 20px; /* Adjust positioning for mobile */
   }
