@@ -290,16 +290,25 @@ body, ul {
 }
 
 @media (max-width: 768px) {
-    /* Mobile navigation adjustments */
-    .menu {
-        display: none; /* Hide the menu by default on mobile */
+ /* Show the side menu when the menu-toggle button is checked */
+    #menu-toggle:checked + .side-menu {
+        transform: translateX(0); /* Slide it into view */
+        display: block; /* Show it */
     }
 
-    /* Show the menu when the mobile menu button is clicked */
-    #menu-toggle:checked + .menu {
-        display: block;
+    /* Style the button or icon to open the menu */
+    button#menu-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's above other content */
+        display: block; /* Display the button on mobile screens */
     }
-
     /* Adjust logo size for mobile */
     .logo img {
         width: 10em; /* Adjust the width as needed */
