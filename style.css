@@ -276,9 +276,7 @@ display: inline-block; /* Show it on hover */
     justify-content: flex-start;
   }
   .menu li {
-    flex: 0 0 calc(33.33% - 20px);
-    margin-right: 20px;
-    margin-bottom: 20px;
+    max-width: 50%;
   }
   /* Adjust title and subtitle for mobile */
   .title {
@@ -290,9 +288,8 @@ display: inline-block; /* Show it on hover */
   }
   /* Adjust image and short bio for mobile */
   .logo img {
-      width: 70%; /* Adjust the width to fit the screen */
-      height: auto;
-      padding: 10px; /* Reduce padding for mobile */
+      width: 90%; /* Adjust the width to fit the screen */
+      padding: 5px; /* Reduce padding for mobile */
       top: 20px; /* Adjust positioning for mobile */
   }
 
