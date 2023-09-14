@@ -289,22 +289,67 @@ body, ul {
   display: inline-block; /* Show it on hover */
 }
 
-  /* CSS For Mobile Devices, this should alter the entire document */ 
+@media (max-width: 768px) {
+    /* Mobile navigation adjustments */
+    .menu {
+        display: none; /* Hide the menu by default on mobile */
+    }
 
-  @media (max-width: 768px) {
-    .body {
-        width: 100%;
-        padding: 10px;
+    /* Show the menu when the mobile menu button is clicked */
+    #menu-toggle:checked + .menu {
+        display: block;
     }
-    .nav {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center-align text */
+
+    /* Adjust logo size for mobile */
+    .logo img {
+        width: 10em; /* Adjust the width as needed */
+        padding: 10px; /* Reduce padding for mobile */
+        top: 20px; /* Adjust positioning for mobile */
     }
-    .menu li {
-         padding: 10px 0; /* Adjust vertical padding for mobile layout */
+    /* Adjust title and subtitle for mobile */
+    .title {
+        font-size: 48px; /* Adjust font size as needed */
+        margin-bottom: 5px; /* Reduce margin for mobile */
     }
-    .image {
-    margin-right: 0; /* Remove the right margin on small screens */
-    margin-bottom: 20px; /* Add some space between image and text on small screens */
+    .subtitle {
+        font-size: 18px; /* Adjust font size as needed */
     }
-  }
+    /* Adjust image and short bio for mobile */
+    .logo img {
+        width: 100%; /* Adjust the width to fit the screen */
+        padding: 10px; /* Reduce padding for mobile */
+        top: 20px; /* Adjust positioning for mobile */
+    }
+
+    .shortbio {
+        font-size: 16px; /* Adjust font size as needed */
+        padding: 5px; /* Reduce padding for mobile */
+        margin-left: 1em; /* Adjust margin for mobile */
+    }
+    /* Adjust project section for mobile */
+    .project-title {
+        font-size: 48px; /* Adjust font size as needed */
+    }
+
+    .project-text {
+        font-size: 20px; /* Adjust font size as needed */
+        padding: 5px; /* Reduce padding for mobile */
+    }
+    /* Adjust contact section for mobile */
+    .contact-text1,
+    .contact-text2 {
+        font-size: 24px; /* Adjust font size as needed */
+        margin-right: 10px; /* Adjust margin for mobile */
+        margin-left: 10px; /* Adjust margin for mobile */
+    }
+    /* Adjust social links in footer for mobile */
+    .social-links {
+        margin-left: 20px; /* Adjust margin for mobile */
+        margin-top: 10px; /* Adjust margin for mobile */
+    }
+
+    .social-text {
+        font-size: 18px; /* Adjust font size as needed */
+        margin-left: 20px; /* Adjust margin for mobile */
+    }
+}
