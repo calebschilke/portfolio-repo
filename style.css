@@ -270,11 +270,15 @@ display: inline-block; /* Show it on hover */
 @media (max-width: 768px) {
 /* Show the side menu when the menu-toggle button is checked */
 
-  /* Adjust logo size for mobile */
-  .logo img {
-      width: 10em; /* Adjust the width as needed */
-      padding: 10px; /* Reduce padding for mobile */
-      top: 20px; /* Adjust positioning for mobile */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .menu li {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
   /* Adjust title and subtitle for mobile */
   .title {
@@ -286,7 +290,8 @@ display: inline-block; /* Show it on hover */
   }
   /* Adjust image and short bio for mobile */
   .logo img {
-      width: 100%; /* Adjust the width to fit the screen */
+      width: 70%; /* Adjust the width to fit the screen */
+      height: auto;
       padding: 10px; /* Reduce padding for mobile */
       top: 20px; /* Adjust positioning for mobile */
   }
@@ -313,6 +318,7 @@ display: inline-block; /* Show it on hover */
 .experience-heading {
     margin-left: 0; /* Remove left margin for mobile */
     font-size: 20px; /* Adjust font size for mobile */
+    max-width: 70%;
 }
 
 .experience-container .tab {
