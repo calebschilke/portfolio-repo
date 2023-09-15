@@ -315,6 +315,9 @@ display: inline-block; /* Show it on hover */
       padding: 5px; /* Reduce padding for mobile */
       margin-left: 1em; /* Adjust margin for mobile */
   }
+  .mobile-indent {
+    padding-left: 20px;
+  }
   /* Adjust project section for mobile */
   .project-title {
       font-size: 48px; /* Adjust font size as needed */
