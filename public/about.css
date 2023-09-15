@@ -113,7 +113,7 @@ header {
 /* Description Area For Those Interested */ 
 
 .bio-title {
-  margin-left: 1em;
+  margin-left: 100px;
   font-size: 70px;
   font-weight: bold;
   color: #4f739c; 
@@ -122,6 +122,7 @@ header {
   max-width: 700px;
   margin-left: 5em;
   color: #cac9c9;
+  margin-left: 100px;
 }
 .keyword {
   font-size: 23px;
