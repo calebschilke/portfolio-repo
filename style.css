@@ -1,364 +1,425 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-  justify-content: center;
+/* styles.css */
+body, h1, h2, h3, p, nav {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next', sans-serif;
 }
 
-/* Navigation Bar, this will be mostly for some basic areas */ 
-
-body, ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  padding: 10px;
-}
-
-.logo img {
-  width: 20em;
-  height: auto;
-  max-width: 100%;
-  padding: 20px;
-  top: 40px;
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  margin-top: 30px;
-  margin-right: 20px;
-}
-
-.menu li {
-  margin-right: 40px;
-  font-size: 18px;
-}
-
-.menu li:last-child {
-  margin-right: 30px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #eef4ed;
-  font-weight: bold;
-}
-
-  .logo {
-    margin-bottom: 10px;
-  }
-
-/* Hover Effects on Navigation Page */ 
-
-.menu a:hover {
-  opacity: 0.7; 
-  cursor: pointer;
-}
-
-/* Title Text */ 
 
 header {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.title {
-  font-size: 80px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #eef4ed;
-  opacity: 0.9;
-}
-
-.subtitle {
-  font-size: 24px;
-  color: #cac9c9;
-}
-
-/* Image & Short Bio for Main Page */ 
-
-.title-container {
-  display: flex;
-  justify-content: center;
-}
-
-.text {
-  flex: 1;
-  max-width: 650px;
-  text-align: center;
-}
-
-.shortbio {
-  font-size: 20px;
-  color: #777;
-  padding: 5px;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.intro-bio {
-  font-size: 28px;
-  color: #cac9c9;
-  bottom: 10px;
-}
-
-/* The Projects Section */ 
-
-.project-container {
-  text-align: center;
-}
-
-.project-title {
-  font-size: 80px;
-  font-weight: bold;
-  color: #4f739c; 
-}
-
-.project {
-  text-align: center;
-  padding: 15px; 
-}
-
-.project-text {
-  font-size: 35px;
-  color: #8da9c4;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.project-text:hover {
-  color: #eef4ed;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-/*  For Experience Section */
-
-.experience-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-}
-.experience-container .tab {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  position: relative;
-  padding: 0 20px 20px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.experience-heading {
-  display: flex;
-  flex-direction: column;
-  color: #eef4ed;
-  font-size: 23px;
-  cursor: pointer;
-  max-width: 600px;
-  word-wrap: break-word;
-}
-.experience-content {
-  color: #eef4ed;
-  max-width: 600px;
-  max-height: 0;
-  transition: 1s;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  margin-left: 0;
-}
-.experience-heading:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-.experience-location {
-  font-weight: bold;
-  color: #8da9c4;
-}
-.experience-date {
-  font-weight: 10;
-  font-style: italic;
-}
-
-.experience-container .tab input {
-  display: none;
-}
-.experience-container .tab label {
-  cursor: pointer;
-}
-.experience-container .tab label::after {
-  color: #eef4ed;
-  position: absolute;
-  right: 50px;
-  top: 35px;
-  font-size: 2em;
-  opacity: 0.8;
-  transition: transform 0.3s;
-}
-.experience-container .tab input:checked ~ label::after {
-  transform: rotate(180deg);
-}
-
-.experience-container .tab input:checked ~ .experience-content {
-  max-height: 1000px;
-}
-
-/*   Contact Section */
-
-.experience-container1 {
-text-align: center;
-}
-.contact-text1 {
-  font-size: 28px;
-  color: #eef4ed;
-  text-decoration: none;
-  margin-right: 30px
-}
-
-.contact-text2 {
-  font-size: 28px;
-  color: #eef4ed;
-  text-decoration: none;
-  margin-left: 30px
-}
-.contact-text1:hover {
-  text-decoration: underline;
-}
-.contact-text2:hover {
-  text-decoration: underline;
-}
-
-/* Footer Information  */
-.social-links {
-  margin-left: 40px;
-  margin-top: 30px;
-}
-
-.social-text {
-  display: inline-block;
-  font-size: 20px; 
-  color: #e0e1dd; 
-  text-decoration: none; 
-  padding: 10px; 
-  margin-left: 50px; 
-  position: relative; /* Add this to create a stacking context */
-}
-
-.social-text:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-/* Add this to create the extra text */
-.social-text::before {
-content: " - Let's Connect"; /* Add your extra text here */
-position: absolute;
-left: 100%;
-top: 4px;
-color: #e0e1dd;
-padding: 5px;
-display: none; /* Initially hide it */
-white-space: nowrap;
-opacity: 0.8;
-}
-
-.social-text:hover::before {
-display: inline-block; /* Show it on hover */
-}
-
-@media (max-width: 768px) {
-/* Show the side menu when the menu-toggle button is checked */
-
-  .menu {
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
-  .menu ul {
+    padding: 20px 10%; /* Adjust the padding or use a fixed width container to control the space */
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.logo-container {
+    text-align: left;
+}
+
+main {
+    text-align: left;
+    padding: 50px 12%; /* Adjust padding to push content slightly to the left */
+}
+
+main a {
+    display: inline-block; 
+    font-size: 92px; /* Adjust font size as needed */
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #ccc; /* A light grey color */
+    transition: color 0.3s, transform 0.2s ease; /* Smooth transition for color change */
+    margin: 20px 10px; /* Add margin to create space around the links */
+}
+
+main a:hover {
+    color: var(--hover-text-color);
+    cursor: pointer; 
+    transform: translateY(-2px);
+}
+
+
+/* Define your color scheme using CSS variables */
+#theme-toggle {
+    padding: 5% 10%;
+    font-size: 16px;
+    font-weight: bold; 
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+
+:root {
+    --background-color: #FAFAFA; /* Light background */
+    --text-color: #343A40; /* Dark text */
+    --nav-color: #354F52; /* Navigation color */
+    --hover-text-color: #8a8a8a; /* Lighter text on hover */
+    --button-bg: #6a7e80;
+    --button-text: #FAFAFA;
+    --button-hover-bg: #29546A;
+}
+
+/* Dark theme variables */
+.dark-mode {
+    --background-color: #000000; /* Dark background */
+    --text-color: #FAFAFA; /* Light text */
+    --link-color: #FAFAFA;
+    --heading-color: #FAFAFA;
+    --nav-color: #9d9d9d; /* Darker navigation color */
+    --hover-text-color: #efefef; /* Darker text on hover */
+    --button-bg: #000000;
+    --button-hover-bg:  #29546A;
+}
+
+/* Use the variables for your elements */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.nav-container a {
+    color: var(--nav-color);
+}
+
+.nav-container a:hover {
+    color: var(--hover-text-color);
+}
+
+/* ... other styles */
+
+/* Add to your existing styles.css */
+
+#web-development-section {
+    padding: 20px;
+    /* Any additional styling for this section */
+}
+
+#web-development-section h2{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    font-size: 52px;
+    color: var(--header-text);
+}
+
+.web-dev-content {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: left;
-  }
-  .menu li {
-    padding: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-
-  /* Adjust title and subtitle for mobile */
-  .title {
-      font-size: 48px; /* Adjust font size as needed */
-      margin-bottom: 5px; /* Reduce margin for mobile */
-  }
-  .subtitle {
-      font-size: 18px; /* Adjust font size as needed */
-  }
-  /* Adjust image and short bio for mobile */
-  .logo img {
-      width: 80%; /* Adjust the width to fit the screen */
-      height: auto;
-      padding: 10px; /* Reduce padding for mobile */
-      top: 20px; /* Adjust positioning for mobile */
-  }
-
-  .shortbio {
-      font-size: 14px; /* Adjust font size as needed */
-      padding: 5px; /* Reduce padding for mobile */
-      margin-left: 1em; /* Adjust margin for mobile */
-  }
-  /* Adjust project section for mobile */
-  .project-title {
-      font-size: 48px; /* Adjust font size as needed */
-  }
-
-  .project-text {
-      font-size: 20px; /* Adjust font size as needed */
-      padding: 5px; /* Reduce padding for mobile */
-  }
-  .experience-container {
-    margin-left: 0; /* Remove left margin for mobile */
-    gap: 30px; /* Increase the gap between experiences */
+    justify-content: space-around; /* This will space out the items evenly */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
 }
 
-.experience-heading {
-    margin-left: 0; /* Remove left margin for mobile */
-    font-size: 20px; /* Adjust font size for mobile */
-    max-width: 70%;
+.web-dev-item {
+    flex-basis: 30%; /* Adjust the width of each item */
+    margin: 10px;
+    text-align: center; /* Center the text under each image */
 }
 
-.experience-container .tab {
-    padding: 20px; /* Increase padding for each tab on mobile */
+.web-dev-item img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and title */
 }
 
-.experience-content {
-    max-width: 100%; /* Allow content to take up full width on mobile */
-    margin-left: 0; /* Remove left margin for mobile */
-    padding-left: 20px; /* Add left padding for mobile */
+.web-dev-item h3 {
+    margin: 10px 0; /* Adjust spacing as needed */
 }
-  /* Adjust contact section for mobile */
-  .contact-text1,
-  .contact-text2 {
-      font-size: 24px; /* Adjust font size as needed */
-      margin-right: 10px; /* Adjust margin for mobile */
-      margin-left: 10px; /* Adjust margin for mobile */
-  }
-  /* Adjust social links in footer for mobile */
-  .social-links {
-      margin-left: 20px; /* Adjust margin for mobile */
-      margin-top: 10px; /* Adjust margin for mobile */
-  }
 
-  .social-text {
-      font-size: 18px; /* Adjust font size as needed */
-      margin-left: 20px; /* Adjust margin for mobile */
-  }
+.web-dev-item p {
+    margin-bottom: 10%; 
+}
+
+#ux-ui-section {
+    padding: 20px;
+    /* Any additional styling for this section */
+}
+
+#ux-ui-section h2{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    font-size: 52px;
+    color: var(--header-text);
+}
+.ux-ui-item {
+    flex-basis: 30%; /* Adjust the width of each item */
+    margin: 10px;
+    text-align: center; /* Center the text under each image */
+}
+
+.ux-ui-item p {
+    max-width: 100%;
+}
+
+.ux-ui-item img {
+    width: 50%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#education-section {
+    padding: 10px;
+    /* Any additional styling for this section */
+}
+
+#education-section h2{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    font-size: 52px;
+    color: var(--header-text);
+}
+
+.education-content {
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */ 
+    margin-left: 10%; 
+    text-align: left; 
+}
+
+.education-content h3 {
+    font-size: 26px; 
+}
+
+.education-content p {
+    font-size: 20px;
+    margin-bottom: 3%; 
+}
+#work-section {
+    padding: 10px;
+    /* Any additional styling for this section */
+}
+
+#work-section h2{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    font-size: 52px;
+    color: var(--header-text);
+}
+.work-content {
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */ 
+    margin-left: 10%; 
+    text-align: left; 
+}
+
+.work-content h3 {
+    font-size: 26px; 
+}
+
+.work-content p {
+    font-size: 20px; 
+}
+.work-content li {
+    font-size: 20px; 
+    margin-bottom: 0.5%; 
+}
+#about-section {
+    padding: 20px;
+    text-align: left;
+}
+
+#about-section h2 {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    font-size: 52px;
+    color: var(--header-text);
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: non-wrap;
+    gap: 10%; /* Adjust the gap between photos */
+}
+
+.photo-item {
+    text-align: center;
+}
+.photo-item img {
+    max-width: 100%; /* Ensures images are responsive */
+    width: 250px; 
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 50%; 
+    object-fit: cover;
+    overflow: hiddnen; 
+}
+
+.photo-item p {
+    margin-top: 5%; 
+    font-weight: bold; 
+    font-size: 18px;
+}
+
+.about-content {
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */ 
+    margin-left: 10%; 
+    text-align: left; 
+}
+
+.about-content h3 {
+    font-size: 36px;
+    margin-top: 5%;  
+}
+
+.about-content h4 {
+    font-size: 24px; 
+}
+
+.about-content p {
+    font-size: 28px;
+}
+
+.about-content li {
+    font-size: 22px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--footer-bg-color, #29546A); /* Fallback color */
+    color: var(--footer-text-color, #FAFAFA); /* Fallback color */
+}
+
+.footer-content {
+    display: inline-block;
+    /* Add more styling as needed */
+}
+
+footer a {
+    color: inherit; /* Inherits color from the footer */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--link-hover-color, #D0D3D4); /* Fallback color */
+}
+
+footer a i {
+    margin-right: 5px; /* Adds a small space between the icon and the text */
+}
+
+#back-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Sit on top */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    background-color: var(--button-bg);
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Text size */
+    transition: 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+#back-to-top i { 
+    font-size: 20px;
+}
+
+/* Add this at the end of your existing styles.css */
+
+@media only screen and (max-width: 375px) {
+    header { 
+        flex-direction: row;
+        justify-content: flex-start; 
+        padding: 10px; 
+    }
+
+    header h1 {
+        font-size: 18px; /* Smaller font size for the header */
+        margin: 1em; 
+    }
+
+    #theme-toggle {
+        padding: 10px;
+        font-size: 12px; 
+        margin: 1em;
+    }
+
+    main {
+        padding: 20px 2%; /* Smaller padding for the main content */
+    }
+
+    main a {
+        font-size: 38px; /* Smaller font size for main links */
+        margin: 5px 5px; /* Adjust margin for main links */
+    }
+
+
+    #web-development-section h2, #ux-ui-section h2, #education-section h2, #work-section h2, #about-section h2 {
+        text-align: left; /* Align the h2 text to the left */
+        margin-left: 4%;
+        font-size: 34px; /* You can adjust this size as needed */
+    }  
+
+    .web-dev-item, .ux-ui-item, .education-content, .work-content, .about-content {
+        flex-basis: 100%; /* Full width for flex items */ 
+    }
+
+    .web-dev-item p, .ux-ui-item p {
+        font-size: 14px;
+    }
+
+    .education-content h3, .work-content h3 {
+        font-size: 20px;
+    }
+
+ .work-content p {
+        font-size: 18px;
+    }
+
+    .education-content p {
+        font-size: 16px;
+    }
+
+    .education-content li, .work-content li {
+        font-size: 16px;
+    }
+
+    .photo-grid {
+        gap: 5%; /* Smaller gap between photos */
+    }
+
+    .photo-item img {
+        width: 50px; /* Smaller size for images */
+        height: 50px;
+    }
+
+    .photo-item p, .about-content h3, .about-content h4, .about-content p, .about-content li {
+        font-size: 16px; /* Smaller font size for text under photos */
+    }
+
+    #back-to-top {
+        right: 10px; /* Adjust the position of the back-to-top button */
+        bottom: 10px;
+    }
+
+    footer a {
+        font-size: 13px; /* Smaller font size for footer links */
+    }
+
+    /* Additional responsive adjustments as needed */
 }
